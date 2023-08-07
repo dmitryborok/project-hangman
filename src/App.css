@@ -54,21 +54,45 @@
   background-color: red;
 }
 
-.game-over {
+.container {
+  width: 600px;
+}
+
+.end-game {
   position:absolute;
-  top: 20%;
-  left: 20%;
-  width: 60%;
-  height: 60%;
+  background-color: white;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
   font-size: xx-large;
-  text-align: center;
-  border: solid 5px blue;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
+  z-index: 1;
+}
+
+.game-over {
+  border: solid 5px red;
+  color: red;
+}
+
+.congrats {
+  border: solid 5px green;
+  color: green;
+}
+
+.word-container {
+  text-align: center;
 }
 
 .keyboard-container {
   width: 400px;
   display: flex;
+  margin: auto;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -87,7 +111,12 @@
 }
 
 .letter-to-guess {
-  margin: 20px;
+  margin: 10px;
   font-size: 4em;
   color: chartreuse;
+}
+
+.definition {
+  font-size: 1.5em;
+  font-style: italic;
 }

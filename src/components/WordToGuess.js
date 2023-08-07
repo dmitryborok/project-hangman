@@ -12,10 +12,12 @@ function WordToGuess({word, processRightGuess, processWrongGuess, guessedLetters
         }
     }
 
-    return (<div>
-        {word.split("").map(letter => <LetterToGuess letter={letter in guessedLetters ? letter : "_"}/>)}
-        <Keyboard triedLetters={triedLetters} checkAndProcessLetter={checkAndProcessLetter}/>
-    </div>  );
+    return (<>
+            <div className="word-container">
+                {word.split("").map(letter => <LetterToGuess letter={letter in guessedLetters ? letter : "_"}/>)}
+            </div>
+            <Keyboard triedLetters={triedLetters} checkAndProcessLetter={checkAndProcessLetter}/>
+        </>  );
 }
 
 export default WordToGuess;
